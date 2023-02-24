@@ -1,0 +1,36 @@
+.git 폴더 압축파일에서 제외
+
+head meta정보 > keywords, description내용 1차 추가 / 내용 보완 필요
+
+png > jpg로 압축
+
+logo 연결페이지 index.html로 수정
+
+내비게이션 예매 메뉴 및 빠른 예매하기 버튼에 예매하기 모달창 연결
+
+
+.container의 너비값 > max-width : 1320px; width: 70%으로 변경
+
+header position:fix 위해서 main{padding-top: 56px} 추가
+
+cultureplex 제목 애니메이션 타이밍 조절을 위해 조건문 cpOffsetTop*0.8로 수정(index.js 17line) 및 주석문 //컬쳐플렉스 title 나타나는 코드 위치를 line 248 > line 7로 수정
+
+헤더 색 변경 조건을 980으로 수정
+
+
+top버튼 추가
+
+에그지수 설명 알림창 추가
+
+
+배너 동영상 외부 버튼 임시삭제 및 관련 자바스크립트 임시삭제 (주석처리)
+
+
+iframe의 인라인스타일 frameborder=0 일괄 삭제(웹표준 검사 오류)
+
+FAQ alert_login 위치 조정 (웹표준 검사 오류로 label 밖으로)
+
+p 태그 안의 제목태그 위치 조정 (웹표준 검사 오류로 밖으로)
+
+그 외 웹표준 검사 1차 완료
+

@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="html5, css, javascript">
+    <meta name="description" content="KDT 교육 포트폴리오 - 대상 홈페이지 리뉴얼">
+    <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/common.css">
+    <title>CGV - 영화 그 이상의 감동</title>
+</head>
+<body>
+<!-- 헤더 -->
+<header>
+    <div class="popup">
+        <h2 class="subparagraph bold">본 사이트는 구직용 포트폴리오 사이트입니다. <br> CGV와는 무관함을 안내드립니다.</h2>
+        <h3>본 사이트에 사용된 모든 이미지의 저작권은<br>CGV에 있으므로 무단으로 사용 할 수 없습니다.</h3>
+        <hr>
+        <p>학습기간: 22.10.27 ~ 23.04.19</p>
+        <p>제작기간: 2022.11.01 ~ 22.12.22</p>
+        <p>특징: html, css, vanila js</p>
+        <p>구현 완료 페이지 : 메인, 모달창</p>
+        <p>기획서 보기:</p>
+        <hr>
+        <h3>※업무분장</h3>
+        <p>기획, 디자인: 공통</p>
+        <p>구현:</p>
+        <ul>
+            <li>헤더, 문의사항 - 김지*</li>
+            <li>배너 - 고준*</li>
+            <li>컬쳐플렉스 - 문예*</li>
+            <li>예매창, 이벤트, 푸터 - 이순*</li>
+        </ul>
+        <input type="checkbox" id="portfolio_cookie">
+        <label for="portfolio_cookie" class="cf">일주일 동안 보지 않기</label>
+        
+        <button class="close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="container cf">
+		<h1 class="logo"><a href="index.html">CGV</a></h1>
+		<nav class="cf">
+			<ul class="menu">
+				<li class="mainmenu">
+					<a href="#">극장</a>
+					<ul class="submenu">
+						<li><a href="#">CGV극장</a></li>
+						<li>|</li>
+						<li><a href="#">특별관</a></li>
+						<li>|</li>
+						<li><a href="#">아트하우스</a></li>
+					</ul>
+				</li>
+				
+				<li class="mainmenu reservation">
+					<a href="#modal_ticketing">예매</a>
+				</li>
+
+				<li class="mainmenu">
+					<a href="#">스토어</a>
+					<ul class="submenu">
+						<li><a href="#">이용권</a></li>
+						<li>|</li>
+						<li><a href="#">스낵</a></li>
+						<li>|</li>
+						<li><a href="#">씨네샵</a></li>
+					</ul>
+				</li>
+
+				<li class="mainmenu">
+					<a href="#">이벤트</a>
+					<ul class="submenu">
+						<li><a href="#">CGV극장별</a></li>
+						<li>|</li>
+						<li><a href="#">당첨자발표</a></li>
+						<li>|</li>
+						<li><a href="#">제휴할인</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		
+		<div class="info cf">
+			<ul>
+				<li class="language">
+					<i class="fa-solid fa-globe"></i><a href="#" class="link">KO</a><i class="fa-solid fa-sort-down"></i>
+					<ul class="lang">
+						<li><a href="#">EN</a></li>
+						<li><a href="#">CH</a></li>
+						<li><a href="#">JP</a></li>
+					</ul>
+				</li>
+				<li class="sign">
+					<a href="#">로그인</a>
+					<span>|</span>
+					<a href="#">회원가입</a>
+				</li>
+				<li class="question">
+					<a href="#modal_form" title="CGV 1:1 문의하기"><i class="fa-solid fa-headset question"></i></a>
+				</li> 
+			</ul>
+		</div>
+		<section id ="modal" class="modal_FAQ cf hidden">
+			<h2 class="hidden">문의하기</h2>
+			<button class="btn_close"><i class="fa-solid fa-xmark"></i></button>
+			<form>
+				<h3>&lt;개인정보 수집에 대한 동의&gt;</h3>
+				<div class="notice">
+					
+                    <h4>개인정보 수집, 이용 및 제공 등에 관한 고지사항</h4>
+                    <p>이용자 본인은 아래의 개인정보가 사실임을 확인하며, 아래와 같이 개인정보를 수집 및 이용하는 것에 동의합니다.</p>
+					
+                    <h4>[개인정보의 수집 및 이용목적]</h4>
+                    <p>
+                        - 비회원 예매서비스 제공<br>
+                        - 이용자식별, 요금정산, 추심, 신규서비스 개발 및 마케팅 광고, 접속빈도 파악 등
+                    </p>
+
+                    <h4>[수집하는 개인정보의 항목]</h4>
+					<p>
+					    - 필수입력사항 : 이용자의 식별을 위한 정보<br>
+                        - 입력정보 : 이름, 휴대폰번호, 법정생년월일(6자리), 비밀번호, 결제정보
+					</p>
+
+                    <h4>[개인정보의 보유 및 이용기간]</h4>
+					<p>개인정보의 수집목적 또는 제공 받은 목적이 달성되면 즉시 파기합니다. 다만, 상법 등 관련 법령의 규정에 의하여 거래관련 관리 의무 관계의 확인 등을 이유로 대금결제및재화들의공급에관한기록에 의거 5년간 보유합니다.</p>
+                    <p>
+                        * 개인정보 제공에 동의하지 않을 권리가 있으며 개인정보 제공에 동의하지 않을 경우 비회원 서비스는 제공되지 않습니다.<br>
+                        * 비회원은 예매서비스 이외에 리뷰, 별점 & 140평 등록 등의 기타 CGV서비스를 이용하실 수 없으며, 기타 CGV서비스를 제한적으로 이용하실 수 있습니다.<br>
+                        * 비회원의 경우에도, 위 내용 이외의 사항은 개인정보취급방침의 규정이 적용됩니다.
+                    </p>
+                    <h4>[기술적/관리적 보호대책]</h4>
+                    <p>
+                        - CJ CGV(주)는 서버 및 네트워크 관련 보안시스템을 갖추고 있습니다. 방화벽 등 해킹 등 외부침입에 대비하여 각 서버마다 침입차단시스템 및 취약점 분석시스템 등을 갖추어 '이용자'가 제공한 개인정보보호에 만전을 기하고 있습니다. 개인 정보 취급 직원 최소화는 물론 각 직원별 개인정보 접근권한을 달리하고, 수시보안교육을 통해 본 방침의 준수를 강조하고 있습니다.<br>
+                        - CJ CGV(주)는 "이용자" 개인의 실수나 기본적인 인터넷의 위험성 때문에 일어나는 일들에 대해 책임을 지지 않습니다.<br>
+                        - 그 외 내부 관리자의 실수나 기술관리 상의 사고로 인해 개인정보의 상실, 유출, 변조, 훼손이 유발될 경우 CJ CGV(주)는 즉각 "이용자"에게 사실을 알리고 적절한 대책과 보상을 강구할 것입니다.
+                    </p>
+				</div>
+				<div class="radio_group">
+					<input type="radio" name="agree" id="agree">
+					<label for="agree">동의합니다.</label>
+					<input type="radio" name="agree" id="disagree">
+					<label for="disagree">동의하지 않습니다.</label>
+				</div>
+				<p class="label_style">
+					<input type="email" name="useremail" id="useremail" required placeholder="ID@address.com" value="">
+					<label for="useremail">이메일</label> 
+				</p>
+
+				<p class="label_style">
+					<input type="tel" id="phone" placeholder="010-0000-0000" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" required>
+					<label for="phone">전화번호</label>
+				</p>
+				<div class="check_group">
+					<span>답변수신 여부</span>
+					<input type="checkbox" checked name="reply_email" id="email">
+					<label for="email" >이메일</label>
+					<input type="checkbox" name="reply_SMS" id="SMS">
+					<label for="SMS">SMS</label>
+					<input type="checkbox" name="reply_homepage_service" id="homepage_service" disabled>
+					<label for="homepage_service" class="disable">홈페이지 알림 서비스
+                    </label>
+                    <div class="alert_login">
+                        <p>홈페이지 알림서비스를 받기 위해선 로그인이 필요합니다.</p>
+                        <a href="#" class="link">로그인하러 가기</a>
+                    </div>
+				</div>
+				
+				<div class="check_group select_wrap">
+					<span>문의 유형</span>
+						<select name="type_of_inquiry" id="type_of_inquiry">
+							<option value="ticketing">예매 / 매표</option>
+							<option value="payment">관람권/결제수단</option>
+							<option value="membership">멤버쉽/클럽서비스</option>
+							<option value="VIP">VIP 관련</option>
+							<option value="benefit">영화혜택</option>
+							<option value="using">영화관 이용</option>
+							<option value="special_hall">특별관</option>
+							<option value="giftshop">기프트샵</option>
+							<option value="homepage_mobile">홈페이지/모바일</option>
+							<option value="etc">기타</option>
+						</select>
+
+						<ul class="selectReplace">
+							<li data-value="ticketing">예매/매표</li>
+							<li data-value="payment">관람권/결제수단</li>
+							<li data-value="membership">멤버쉽/클럽서비스</li>
+							<li data-value="VIP">VIP 관련</li>
+							<li data-value="benefit">영화혜택</li>
+							<li data-value="using">영화관 이용</li>
+							<li data-value="special_hall">특별관</li>
+							<li data-value="giftshop">기프트샵</li>
+							<li data-value="homepage_mobile">홈페이지/모바일</li>
+							<li data-value="etc">기타</li>
+						</ul>
+				</div>
+				<div class="text_group">
+					<textarea name="inquiry" id="inquiry" cols="30" rows="10"></textarea>
+					<label for="inquiry">문의 내용</label> 
+				</div>
+				<p class="file_group">
+					<input type="file" id="file" multiple>
+					<label for="file">첨부하기</label>
+				</p>
+				<button type="submit">제출하기</button>
+			</form>
+		</section>
+	</div>
+	<div class="submenu_bg"></div>
+</header>
+<!-- 메인 -->
+<main>
+	<section class="banner banner_back_ground">
+        <div class="promotion_video_wrapper">
+            <div class="promotion_video_container">
+                <div class="banner_gradation1"> </div>
+                <div class="banner_gradation2"> </div>
+                <div class="banner_gradation3"> </div>
+                <div class="promotion_video_item">
+                   
+                    <div class="banner_video_container">
+                        <iframe id="poster-1" src="https://www.youtube.com/embed/ZjVK09RDRY0?" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe><!-- 택시운전사 -->
+                        <iframe id="poster-2" src="https://www.youtube.com/embed/BBEDtovULHY?" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!-- 국제시장 -->
+                        <iframe id="poster-3" src="https://www.youtube.com/embed/eRX5_KUyx7c?" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!-- 올빼미 -->
+                        <iframe id="poster-4" src="https://www.youtube.com/embed/spQtwggaCy4?" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!-- 명량 -->
+                        <iframe id="poster-5" src="https://www.youtube.com/embed/ku9l1fHo5XE?" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe><!-- 블랙팬서 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="movie_poster_banner">
+            <div class="movie_title">
+                <div class ="movie_poster_btn_wrapper">
+              
+                </div>
+                <div class="movie_name">
+                    <p><span class="red">무비차트</span> / 상영예정작</p>
+                </div>
+                <div>
+                    <a href="" target="_blank">+전체보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="controls_wrapper">
+            <div class="controls">
+                <a href="#a" class="prev"><img src="img/btn_poster_prev.png" alt=""></a>
+                <a href="#a" class="next"><img src="img/btn_poster_next.png" alt=""></a>
+            </div>
+            <div class="poster_wrapper">
+                <ul class=" poster_container">
+                    <li data-id="#poster-1" data-num="0" data-idx = 0 >
+                        <div class="movie_poster">
+                        <img src="img/poster_1.jpg"   alt="택시운전사" >
+                        <p class="poster_golden_egg"><span class="random_number"></span></p>
+                            <div class="poster_attribute">
+                                <a href="#a" class="btn_red">예매하기</a>
+                                <a href="#a" class="btn_white">상세보기</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-id="#poster-2" data-num="1"  data-idx = 1 >
+                        <div class="movie_poster">
+                        <img src="img/poster_2.jpg"  alt="국제시장">
+                        <p class="poster_golden_egg"><span class="random_number"></span></p>
+                            <div class="poster_attribute">
+                                <a href="#a" class="btn_red">상세보기</a>
+                                <a href="#a" class="btn_white">예매하기</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-id="#poster-3" data-num="2"  data-idx = 2 >
+                        <div class="movie_poster">
+                        <img src="img/poster_3.jpg"  alt="올빼미">
+                        <p class="poster_golden_egg"><span class="random_number"></span></p>
+                            <div class="poster_attribute">
+                                
+                                <a href="#a" class="btn_red">상세보기</a>
+                                <a href="#a" class="btn_white">예매하기</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-id="#poster-4" data-num="3" data-idx = 3 > 
+                        <div class="movie_poster">
+                        <img src="img/poster_4.jpg"  alt="명량">
+                        <p class="poster_golden_egg"><span class="random_number"></span></p>
+                            <div class="poster_attribute">
+                                <a href="#a" class="btn_red">상세보기</a>
+                                <a href="#a" class="btn_white">예매하기</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-id="#poster-5" data-num="4"  data-idx = 4>
+                        <div class="movie_poster">
+                            <img src="img/poster_5.jpg"  alt="블랙팬서-와칸다포에버">
+                            <p class="poster_golden_egg"><span class="random_number"></span></p>
+                            <div class="poster_attribute">
+                                <a href="#a" class="btn_red">상세보기</a>
+                                <a href="#a" class="btn_white">예매하기</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="egginfo_wrap">
+                <h3><img src="./img/ico_preegg.png" alt=""> pre egg</h3>
+                <p>개봉 전 영화의 기대 평가 지수입니다.</p>
+                <h3><img src="./img/ico_goldenegg1.png" alt=""><img src="./img/ico_goldenegg2.png" alt="">golden egg</h3>
+                <p>실제 관람객의 영화평가 지수입니다.</p>
+            </div>
+        </div>
+    
+    <a href="" class="btn_Buymovie">빠른 예매하기</a>
+</section>
+
+    <div class="modal_ticketing_wrap hidden" id="modal_ticketing">
+        <section class="modal_ticketing">
+            <h2 class="hidden">빠른 예매하기</h2>
+            <button type="button" class="btn_close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <form class="cf">
+                <div class="section_movie">
+                    <h3>영화</h3>
+                    <div class="btn_sort">
+                        <input type="radio" name="movieTitle_sort" id="movietitle_sorted_rate" checked>
+                        <label for="movietitle_sorted_rate">예매율순</label>
+                        <span></span>
+                        <input type="radio" name="movieTitle_sort" id="movietitle_sorted_abc">
+                        <label for="movietitle_sorted_abc">가나다순</label>
+                    </div>
+                    <hr>
+                    <ul class="scrollstyle">
+                        <li>
+                            <input type="radio" name="movieTitle" id="m2201">
+                            <label for="m2201" class="grade_all">엔시티드림더무비:인어드림</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="movieTitle" id="m2202">
+                            <label for="m2202" class="grade_12">압꾸정</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="movieTitle" id="m2203">
+                            <label for="m2203" class="grade_15">올빼미</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="movieTitle" id="m2204">
+                            <label for="m2204" class="grade_12">탄생</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="movieTitle" id="m2205">
+                            <label for="m2205" class="grade_all">2022카타르월드컵대한민국vs포르투갈</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="movieTitle" id="m2206">
+                            <label for="m2206" class="grade_12">너와사랑한시간</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="movieTitle" id="m2207">
+                            <label for="m2207" class="grade_12">원피스필름레드</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="movieTitle" id="m2208">
+                            <label for="m2208" class="grade_18">본즈앤올</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="section_cinema">
+                    <h3>극장</h3>
+
+                    <div class="btn_sort">
+                        <input type="radio" name="cinema_sort" id="cinema_sort_abc" checked>
+                        <label for="cinema_sort_abc">가나다순</label>
+                        <span></span>
+                        <input type="radio" name="cinema_sort" id="cinema_sort_custom">
+                        <label for="cinema_sort_custom">자주찾는 영화관</label>
+                    </div>
+                    <hr>
+
+                    <div class="cinema_groupwrap cf">
+                        <ul class="group_city scrollstyle">
+                            <li>
+                                <input type="radio" name="cinema_city" id="cinemaCity_seoul">
+                                <label for="cinemaCity_seoul">서울(31)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_city" id="cinemaCity_gyeonggi">
+                                <label for="cinemaCity_gyeonggi">경기(54)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_city" id="cinemaCity_incheon">
+                                <label for="cinemaCity_incheon">인천(11)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_city" id="cinemaCity_kangwon">
+                                <label for="cinemaCity_kangwon">강원(05)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_city" id="cinemaCity_chungcheong">
+                                <label for="cinemaCity_chungcheong">충청(16)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_city" id="cinemaCity_busan">
+                                <label for="cinemaCity_busan">부산(16)</label>
+                            </li>
+                        </ul>
+
+                        <ul class="group_town scrollstyle">
+                            <li>
+                                <input type="radio" name="cinema_branch" id="cinemaBranch_gangnam">
+                                <label for="cinemaBranch_gangnam">강남</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_branch" id="cinemaBranch_gangbyeon">
+                                <label for="cinemaBranch_gangbyeon">강변</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_branch" id="cinemaBranch_konkuk">
+                                <label for="cinemaBranch_konkuk">건대입구</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_branch" id="cinemaBranch_guro">
+                                <label for="cinemaBranch_guro">구로</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_branch" id="cinemaBranch_daehakro">
+                                <label for="cinemaBranch_daehakro">대학로</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_branch" id="cinemaBranch_dongdaemun">
+                                <label for="cinemaBranch_dongdaemun">동대문</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_branch" id="cinemaBranch_deungchon">
+                                <label for="cinemaBranch_deungchon">등촌</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_branch" id="cinemaBranch_myungdong">
+                                <label for="cinemaBranch_myungdong">명동</label>
+                            </li>
+                            
+                        </ul>
+
+                        <ul class="group_special scrollstyle">
+                            <li>
+                                <input type="radio" name="cinema_Cplex" id="cinemaCplex_imax">
+                                <label for="cinemaCplex_imax">IMAX</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_Cplex" id="cinemaCplex_4dx">
+                                <label for="cinemaCplex_4dx">4DX</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_Cplex" id="cinemaCplex_screenx">
+                                <label for="cinemaCplex_screenx">SCREENX</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_Cplex" id="cinemaCplex_private">
+                                <label for="cinemaCplex_private">PRIVATE BOX</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_Cplex" id="cinemaCplex_suite">
+                                <label for="cinemaCplex_suite">SUITE CINEMA</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_Cplex" id="cinemaCplex_chef">
+                                <label for="cinemaCplex_chef">CINE de CHEF</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_Cplex" id="cinemaCplex_tempur">
+                                <label for="cinemaCplex_tempur">TEMPUR CINEMA</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cinema_Cplex" id="cinemaCplex_gold">
+                                <label for="cinemaCplex_gold">GOLD CLASS</label>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="section_date">
+                    <h3>날짜</h3>
+                    <div class="scrollstyle">
+                        <div class="month scrollfix">
+                            <p>2022</p>
+                            <p>12월</p>
+                        </div>
+                        
+                        <ul>
+                            <li>
+                                <input type="radio" name="date" id="date221201">
+                                <label for="date221201">목 01</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221202">
+                                <label for="date221202">금 02</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221203">
+                                <label for="date221203" class="style_blue">토 03</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221204">
+                                <label for="date221204" class="style_red">일 04</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221205">
+                                <label for="date221205">월 05</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221206">
+                                <label for="date221206">화 06</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221207">
+                                <label for="date221207">수 07</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221209">
+                                <label for="date221209">목 09</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221210">
+                                <label for="date221210">금 10</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221211">
+                                <label for="date221211">토 11</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221212">
+                                <label for="date221212">일 12</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221213">
+                                <label for="date221213">월 13</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221214">
+                                <label for="date221214">화 14</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221215">
+                                <label for="date221215">수 15</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221216">
+                                <label for="date221216">목 16</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221217">
+                                <label for="date221217">금 17</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221218">
+                                <label for="date221218">월 18</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221219">
+                                <label for="date221219">화 19</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221220">
+                                <label for="date221220">수 20</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221221">
+                                <label for="date221221">목 21</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221222">
+                                <label for="date221222">금 22</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221223">
+                                <label for="date221223">월 23</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221224">
+                                <label for="date221224">화 24</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221225">
+                                <label for="date221225">수 25</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221226">
+                                <label for="date221226">목 26</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221227">
+                                <label for="date221227">금 27</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date221228">
+                                <label for="date221228">월 28</label>
+                            </li>
+                        </ul>
+                        <div class="month scrollfix">
+                            <p>2023</p>
+                            <p>01월</p>
+                        </div>
+        
+                        <ul>
+                            <li>
+                                <input type="radio" name="date" id="date230101">
+                                <label for="date230101">목 01</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date230102">
+                                <label for="date230102">금 02</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date230103">
+                                <label for="date230103" class="style_blue">토 03</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date230104">
+                                <label for="date230104" class="style_red">일 04</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date230105">
+                                <label for="date230105">월 05</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date230106">
+                                <label for="date230106">화 06</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date230107">
+                                <label for="date230107">수 07</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date230108">
+                                <label for="date230108">목 09</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="date" id="date230109">
+                                <label for="date230109">금 10</label>
+                            </li>
+                        
+                        </ul>
+                    </div>                   
+
+                </div>
+
+                <div class="section_schedule">
+                    <h3>시간</h3>
+                    <div class="legend cf">
+                        <p class="style_red"><span>조조</span>할인</p>
+                        <span></span>
+                        <p class="style_blue"><span>심야</span>할인</p>
+                    </div>
+                    <hr>
+                    <div class="schedule_frame scrollstyle">
+                        <div class="group_schedule">
+                            <p>2D 1관 10층 (총 128석)</p>
+                            <ul class="cf">
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d1f10_1030">
+                                    <label for="time_2d1f10_1030" class="style_red">
+                                        <span class="borderstyle">10:30</span><span class="remainseat">85 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d1f10_1250">
+                                    <label for="time_2d1f10_1250" class="style_blue">
+                                        <span class="borderstyle">12:50</span><span class="remainseat">106 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d1f10_1510">
+                                    <label for="time_2d1f10_1510">
+                                        <span class="borderstyle">15:10</span><span class="remainseat">108 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d1f10_1710">
+                                    <label for="time_2d1f10_1710">
+                                        <span class="borderstyle">17:10</span><span class="remainseat">97 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d1f10_1950">
+                                    <label for="time_2d1f10_1950">
+                                        <span class="borderstyle">19:50</span><span class="remainseat">56 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d1f10_2210">
+                                    <label for="time_2d1f10_2210">
+                                        <span class="borderstyle">22:10</span><span class="remainseat">101 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d1f10_2340">
+                                    <label for="time_2d1f10_2340">
+                                        <span class="borderstyle">23:40</span><span class="remainseat">127 석</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group_schedule">
+                            <p>2D 2관 8층 (총 128석)</p>
+                            <ul class="cf">
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d2f8_1030">
+                                    <label for="time_2d2f8_1030" class="style_red">
+                                        <span class="borderstyle">10:30</span><span class="remainseat">85 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d2f8_1250">
+                                    <label for="time_2d2f8_1250" class="style_blue">
+                                        <span class="borderstyle">12:50</span><span class="remainseat">106 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d2f8_1510">
+                                    <label for="time_2d2f8_1510">
+                                        <span class="borderstyle">15:10</span><span class="remainseat">108 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d2f8_1710">
+                                    <label for="time_2d2f8_1710">
+                                        <span class="borderstyle">17:10</span><span class="remainseat">97 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d2f8_1950">
+                                    <label for="time_2d2f8_1950">
+                                        <span class="borderstyle">19:50</span><span class="remainseat">56 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d2f8_2210">
+                                    <label for="time_2d2f8_2210">
+                                        <span class="borderstyle">22:10</span><span class="remainseat">101 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d2f8_2340">
+                                    <label for="time_2d2f8_2340">
+                                        <span class="borderstyle">23:40</span><span class="remainseat">127 석</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group_schedule">
+                            <p>2D 3관 6층 (총 128석)</p>
+                            <ul class="cf">
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d3f6_1030">
+                                    <label for="time_2d3f6_1030" class="style_red">
+                                        <span class="borderstyle">10:30</span><span class="remainseat">85 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d3f6_1250">
+                                    <label for="time_2d3f6_1250" class="style_blue">
+                                        <span class="borderstyle">12:50</span><span class="remainseat">106 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d3f6_1510">
+                                    <label for="time_2d3f6_1510">
+                                        <span class="borderstyle">15:10</span><span class="remainseat">108 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d3f6_1710">
+                                    <label for="time_2d3f6_1710">
+                                        <span class="borderstyle">17:10</span><span class="remainseat">97 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d3f6_1950">
+                                    <label for="time_2d3f6_1950">
+                                        <span class="borderstyle">19:50</span><span class="remainseat">56 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d3f6_2210">
+                                    <label for="time_2d3f6_2210">
+                                        <span class="borderstyle">22:10</span><span class="remainseat">101 석</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="schedule" id="time_2d3f6_2340">
+                                    <label for="time_2d3f6_2340">
+                                        <span class="borderstyle">23:40</span><span class="remainseat">127 석</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+        
+        
+                    </div>
+                    <a href="#" title="좌석 선택하기">좌석 선택하기</a>
+
+                </div>
+
+                <div class="section_ad cf">
+                    <div class="ad"><img src="img/ad_ticket.png" alt="CGV GIFTCARD! 카드 한장으로 영화, 팝콘, 씨네샵 굿즈까지"></div>
+                    <div class="qr">
+                        <h4>CGV 앱 설치하고<br>편하게 예매하세요</h4>
+                        <img src="img/img_qrcode.png" alt="CGV앱 다운로드 페이지로 이동하기 QR코드">
+                        <p>QR코드를 스캔하고<br>다운로드 페이지로 이동하기</p>
+                    </div>
+                </div>
+
+                <div class="section_ticketinginfo">
+                    <img src="img/img_modalthumb_none.png" alt="">
+                    <div class="ticketinginfo_frame">
+                        <p>
+                            <span class="print_title">영화를 선택해 주세요</span>
+                            <span class="print_location">서울 강남 IMAX</span>
+                            <span class="print_date">2022-11-25</span>
+                        </p>
+                        <p>
+                            <span class="print_floor">2관 10층</span>
+                            <span class="print_time">10:30 ~ 12:10 (조조)</span>
+                        </p>
+                        <p>
+                            <span class="print_party">인원 : 00명</span>
+                            <span class="print_seat">선택좌석 A열 9,9</span>
+                        </p>
+                    </div>
+                </div>
+
+                <button class="submit">결제하러 가기</button>
+            </form>
+        </section>
+        <img class="modal_side_ad left" src="img/ad_ticket_side1_left.png" alt="">
+        <img class="modal_side_ad right" src="img/ad_ticket_side1_right.png" alt="">
+    </div>
+    <div class="modal_ticketing_bg"></div>
+
+	<section class="cultureplex">
+		<div class="title">
+		  <p>culture</p>
+		  <p>complex</p>
+		  <h2>CULTUREPLEX</h2>
+		  <h3>문화와 공간이 공존하는 영화관</h3>
+		</div>
+		<div class="cp_wrapper">
+		  <ul class="cp_container">
+			<li class="cp_list cp_bg">
+			  <div class="cp_detail">
+				<h3>4DX</h3>
+				<hr>
+				<ul class="cp_description cf">
+					<li>
+					  <p>Absolute Cinema Experience</p>
+					  <p>4DX 상영관은 영화의 장면에 맞추어 움직이는 모션시트와 더불어 바람, 빛, 안개, 향기, 진동 등의 다양한 환경 효과를 느낄 수 있는 오감 체험 특별 상영관입니다.</p>
+					</li>
+					<li>
+					  <p>Environmental Effects</p>
+					  <p>단순한 영화 관람을 넘어 영화 속 주인공이 된 듯한 체험을 할 수 있으며, 장면마다 생생함을 극대화시키는 4DX 효과를 통해 영화에 더욱 몰입할 수 있습니다.</p>
+					</li>
+					<li>
+					  <p>Motion Seat</p>
+					  <p>좌석이 상하좌우/앞뒤로 움직이며 현장감을 극대화합니다.</p>
+					</li>
+				  </ul>
+				  <ul class="preview_img cf">
+					<li><a href="#" class="link"><img src="img/img_4dx_main.jpg" alt="Absolute Cinema Experience" data-idx="0"></a></li>
+					<li><a href="#" class="link"><img src="img/img_4dx_side1.jpg" alt="Environmental Effects" data-idx="1"></a></li>
+					<li><a href="#" class="link"><img src="img/img_4dx_side2.jpg" alt="Motion Seat" data-idx="2"></a></li>
+				  </ul>
+			  </div>
+			</li>
+			<li class="cp_list">
+			  <div class="cp_detail">
+				<h3>SUITE CINEMA</h3>
+				<hr>
+				<ul class="cp_description cf">
+				  <li>
+				  <p>A Hotel in the Theater</p>
+				  <p>호텔 스위트룸을 극장 안에 옮긴 듯 독립된 공간과 세련된 인테리어로 쾌적한 영화 관람 환경을 선사합니다. 소중한 이들과 특별한 영화 여행을 떠나보세요 </p>
+				  </li>
+					<li>
+					  <p>Premium & Comfortable Seats</p>
+					  <p>2~4인 이용 가능한 거실타입 공간으로 전 좌석 최고급 리클라이닝 소파 및 체어가 준비되어 있으며 스위트 패키지(무릎담요, 실내용 슬리퍼, 물티슈)를 제공합니다.</p>
+					</li>
+					<li>
+					  <p>Relax & Be Happy, Exclusive Lounge</p>
+					  <p>스위트 시네마 이용 고객만을 위한 익스클루시브 라운지에서는 영화 관람 전 차별화 된 서비스를 제공해 드립니다. 웰컴 주류 및 음료 등을 무료로 즐기며 일상에서의 스트레스를 잠시 내려놓아 보세요.</p>
+					</li>
+				  </ul>
+				  <ul class="preview_img cf">
+					<li><a href="" class="link"><img src="img/img_suite_main.jpg" alt="A Hotel in the Theater" data-idx="0"></a></li>
+					<li><a href="" class="link"><img src="img/img_suite_side1.jpg" alt="Premium & Comfortable Seats" data-idx="1"></a></li>
+					<li><a href="" class="link"><img src="img/img_suite_side2.jpg" alt="Relax & Be Happy, Exclusive Lounge" data-idx="2"></a></li>
+				  </ul>
+				</div>
+			</li>
+			<li class="cp_list">
+			  <div class="cp_detail">
+				<h3>CINE & LIVING</h3>
+				<hr>
+				<ul class="cp_description cf">
+				<li>
+					<p>Unique Space</p>
+					<p>거실에 대한 로망을 담은 다양한 테마로 구성된 공간에서 편안하고 특별한 매력을 즐겨보세요.</p>
+				</li>
+				<li>
+					<p>biggest tv</p>
+					<p>선명하고 밝게 빛나는 LED스크린이 적용된 씨네&리빙룸은 새로운 영화 경험의 충분한 대안이 될 것입니다.</p>
+				</li>
+				<li>
+					<p>Culture Time</p>
+					<p>안락한 쇼파 위 애프터눈티와 책 한권을 곁들일 수 있는 컬처타임은 우리만의 행복한 시간을 만들어 드립니다.</p>
+				</li>
+				</ul>
+				<ul class="preview_img cf">
+					<li><a href="" class="link"><img src="img/img_cine_main.jpg" alt="Unique Space" data-idx="0"></a></li>
+					<li><a href="" class="link"><img src="img/img_cine_side1.jpg" alt="biggest tv" data-idx="1"></a></li>
+					<li><a href="" class="link"><img src="img/img_cine_side2.jpg" alt="Culture Time" data-idx="2"></a></li>
+				</ul>
+			  </div>
+			</li>
+			<li class="cp_list">
+				<div class="cp_detail scx">
+					<h3>SCREEN-X</h3>
+					<hr>
+					<ul class="cp_description cf">
+					  <li>
+						<p>Expanding The Cinema Space</p>
+						<p>ScreenX는 스크린의 경계를 넘어 극대화된 현장감을 제공하는 전세계 가장 트렌디한 무비포맷입니다.</p>
+					  </li>
+					</ul>
+					<ul class="preview_img cf">
+					  <li><img src="img/img_screenx_main.jpg" alt="Expanding The Cinema Space" class="hidden"></li>
+					</ul>
+				  </div>
+			</li>
+			<li class="cp_list">
+				<div class="cp_detail">
+					<h3>KIDS</h3>
+					<hr>
+					<ul class="cp_description cf">
+						<li>
+							<p>Cultureplex for Kids & Families</p>
+							<p>어린이와 가족 고객을 위한 키즈 전용 씨네마를 경험하세요.</p>
+					  	</li>
+					  	<li>
+							<p>Movie Theater</p>
+							<p>어린이/가족 관람객을 위한 ‘자동차석’, ’어린이석’, ‘일반석’으로 구성된 상영관으로 아이들이 취향에 맞게 좌석을 선택하여 영화를 관람하고, 보호자는 일반석에서 아이와 함께 영화를 관람할 수 있습니다.</p>
+					  	</li>
+					  	<li>
+							<p>Driving Zone</p>
+							<p>아이들이 직접 운전해 볼 수 있는 다양한 종류의 어린이 전동차와 드라이빙 트랙이 구비되어 있습니다. CINE KIDS 자동차석 관람 어린이 대상 10분간 드라이빙 체험을 무료로 제공합니다.</p>
+					  	</li>
+					</ul>
+					<ul class="preview_img cf">
+					  <li><a href="" class="link"><img src="img/img_kids_main.jpg" alt="Cultureplex for Kids & Families" data-idx="0"></a></li>
+					  <li><a href="" class="link"><img src="img/img_kids_side1.jpg" alt="Movie Theater" data-idx="1"></a></li>
+					  <li><a href="" class="link"><img src="img/img_kids_side2.jpg" alt="Driving Zone" data-idx="2"></a></li>
+					</ul>
+				  </div>
+			</li>
+		  </ul>
+		  <a href="#" class="btn_prev link"></a>
+		  <a href="#" class="btn_next link"></a>
+		  <p class="pager">
+			<a href="" class="active">1</a>
+			<a href="">2</a>
+			<a href="">3</a>
+			<a href="">4</a>
+			<a href="">5</a>
+		  </p>
+		</div>
+	  </section>
+
+      <section class="event container">
+        <h2 class="subtitle">Event</h2>
+		<div class="slideframe">
+			<ul class="slide cf"></ul>
+		</div>
+		<div class="pager">
+			<a href="" class="btn_prev" title="이벤트 이전페이지 보기"></a>
+			<a href="" class="btn_next" title="이벤트 다음페이지 보기"></a>
+		</div>
+        <a href="" class="btn_more link" title="이벤트 전체보기">+ 전체보기</a>
+	</section>
+
+	<section class="notice">
+		<div class="container cf">
+			<h2 class="subparagraph">공지사항</h2>
+			<ul>
+				<li><a href="" class="link">[기타]22년 VIP 선정 기준 변경 및 추가 기준 관련 안내</a></li>
+				<li><a href="" class="link">[기타] CJ ONE 통합멤버십 미가입고객 대상 전환 안내</a></li>
+				<li><a href="" class="link">[행사/이벤트] CAV 스페셜 키링 증정 이벤트 수령 극장 안내</a></li>
+			</ul>
+			<a href="#" class="btn_more link" title="공지사항 전체보기">+ 전체보기</a>
+		</div>
+    </section>
+    
+	<div class="adv">
+		<a href="#" title="CGV 우리카드 출시, 자세한 내용 보러 가기"><img src="img/ad_adsection.png" alt="CGV 우리카드 출시, 매월 영화 1매 무료에 5천원 할인까지"></a>
+    </div>
+
+    <a href="#" class="link btn_top hidden"></a>
+</main>
+
+<footer class="footertext">
+	<div class="container">
+		<ul class="fnb cf">
+			<li><a href="#" class="link">회사소개</a></li>
+			<li><a href="#" class="link">IR</a></li>
+			<li><a href="#" class="link">채용정보</a></li>
+			<li><a href="#" class="link">광고/제휴/출점문의</a></li>
+			<li><a href="#" class="link">이용약관</a></li>
+			<li><a href="#" class="link">편성기준</a></li>
+			<li><a href="#" class="link"><strong>개인정보처리방침</strong></a></li>
+			<li><a href="#" class="link">법적고지</a></li>
+			<li><a href="#" class="link">이메일주소무단수집거부</a></li>
+			<li><a href="#" class="link">윤리경영</a></li>
+			<li><a href="#" class="link">사이버감사실</a></li>
+		</ul>
+
+        <address>
+            <span>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</span> |
+            <span>대표이사 허민회</span>
+            <span>사업자등록번호 104-81-45690</span> |
+            <span>통신판매업신고번호 2017-서울용산-0662 <a href="#">사업자정보확인</a></span>
+            <span>호스팅사업자 CJ올리브네트웍스</span> |
+            <span>개인정보보호 책임자 심준범</span> |
+            <span>대표이메일 <a href="mailto:cjcgvmaster@cj.net" title="CGV 대표이메일로 메일 보내기">cjcgvmaster@cj.net</a></span>
+            <p>&copy; CJ CGV. All Rights Reserved</p>
+        </address>
+		
+        <div class="familysite">
+            <select>
+                <option value="" selected disabled class="hidden">계열사 바로가기</option>
+                <optgroup label="CJ그룹">
+                    <option value="#">CJ주식회사</option>
+                </optgroup>
+                <optgroup label="식품 &amp; 식품서비스">
+                    <option value="#">CJ제일제당</option>
+                    <option value="#">CJ푸드빌</option>
+                    <option value="#">CJ프레시웨이</option>
+                </optgroup>
+                <optgroup label="생명공학">
+                    <option value="#">CJ제일제당 BIO사업부문</option>
+                    <option value="#">CJ Feed&Card</option>
+                </optgroup>
+                <optgroup label="물류 &amp; 신유통">
+                    <option value="#">CJ대한통운</option>
+                    <option value="#">CJ대한통운 건설부문</option>
+                    <option value="#">CJ올리브영</option>
+                    <option value="#">CJ올리브네트웍스</option>
+                    <option value="#">CJ ENM 커머스부문</option>
+                </optgroup>
+                <optgroup label="엔터테인먼트 &amp; 미디어">
+                    <option value="#">CJ ENM 엔터테인먼트부문</option>
+                    <option value="#">CJ CGV</option>
+                </optgroup>
+            </select>
+            <a href="#" title="선택한 CGV familysite로 이동하기">GO</a>
+            <ul class="sns cf">
+                <li><a href="#" class="link youtube" title="CGV YOUTUBE 채널로 이동하기"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#" class="link facebook" title="CGV FACEBOOK 계정으로 이동하기"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="#" class="link instargram" title="CGV INSTARGRAM 계정으로 이동하기"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="js/database.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

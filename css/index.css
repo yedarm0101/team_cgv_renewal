@@ -1,0 +1,1368 @@
+/* --------- 준혁 : banner --------- */
+
+.banner_back_ground {/* 미리보기확인용 배경 */
+    width:100%;
+   margin: auto 0;
+   background-color: #000;
+ }
+ 
+ 
+.banner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner .promotion_video_wrapper{
+    position: relative;  
+}
+
+.banner .promotion_video_container{
+    width: 100%;
+    height:630px;
+    margin-bottom:36px;
+    position: relative;
+    margin: 0 auto;
+}
+.banner .banner_poster_wrapper{
+    position: absolute;
+    z-index: 1;
+}
+.banner .banner_video_container{
+    position: relative;
+    /* width: 1570px; */
+    height:630px;
+    margin: 0 auto;
+}
+.banner .banner_video_container iframe.active{
+    display:block;
+}
+    
+.banner .banner_poster_container li{
+    display: none;
+    cursor:pointer;
+}
+.banner .banner_poster_container li.active{
+    display: block;
+}
+.banner .banner_poster_container img{
+    width: 100%;
+    z-index:3;
+} 
+
+
+.banner .banner_poster_container > div{
+	display: none;
+}
+
+.banner .promotion_video_item{
+    
+    position: relative;
+}
+
+/* 1570.36x  638y   */
+
+
+.banner iframe{
+    position: absolute;
+	width: 1120px;
+	height: 630px;
+	left: 50%;
+    transform: translateX(-50%);
+	top: 0;
+    display:none;
+}
+
+.banner .banner_gradation1{
+    width: 600px;
+    height: 630px;
+    position: absolute;
+    left:0;
+    top: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    z-index: 50;
+    pointer-events: none;
+}
+.banner .banner_gradation2{
+    width: 600px;
+    height: 630px;
+    position: absolute;
+    right:0;
+    top: 0;
+    background: linear-gradient(270deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    z-index: 5;
+    pointer-events: none;
+}
+.banner .banner_gradation3{
+    width: 1920px;
+    height: 50px;
+    position: absolute;
+    left:0;
+    bottom: 0px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(0,0,0,0.011642156862745057) 69%, rgba(0,0,0,0) 75%);
+    z-index: 11;
+    pointer-events: none;
+}
+
+.banner .movie_title{
+    display:flex;
+    width: 1333.75px;
+    color: #fff;
+    justify-content:space-between;
+    font-size: 20px;
+    margin-bottom: 28px;
+    margin:0 auto;
+    
+}
+.banner .movie_title .red{
+    color: #ed3124;
+    
+}
+.banner .movie_name{
+   margin-left: 118px;
+}
+
+
+
+/* 영상 버튼 */
+
+.banner .movie_poster_btn_wrapper button{
+    background-color: #000;
+}
+
+
+
+.banner .btn_video_audio button img:first-child{
+	display:none; 
+}
+.banner .btn_video_audio button img:last-child{
+	display:block;
+}
+.banner .btn_video_audio button.active img:first-child{
+	display:block;
+}
+.banner .btn_video_audio button.active img:last-child{
+	display:none; 
+}
+
+
+
+.banner .poster_wrapper{
+    position: relative;
+    width:1300px;
+    overflow: hidden;
+    
+    
+}
+.banner .poster_container{
+    width:100%;
+    display:flex;
+    align-items: center;
+    gap:33.75px;
+    
+}
+.banner .poster_container.animated{
+    transition: 0.5s ease-out;
+}
+
+.banner .poster_container.animated.active{
+    transition: none;
+}/* 슬라이드애니메이션 */
+
+/* 197 273 */
+.banner .poster_container li{
+    list-style:none; 
+    
+}
+.banner .poster_container li:last-child{
+    list-style:none; 
+    margin:0;
+    
+} 
+.banner .movie_poster{  
+    /* width:200px; */
+    position:relative;
+    
+    margin-top:28px;
+}
+.banner .movie_poster:after{
+    
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(0,0,0, .5);
+    opacity:0;
+}
+
+.banner .movie_poster:hover img{
+    transform:translateY(-28px);
+}
+.banner .movie_poster:hover:after{
+    opacity:1;
+    transform:translateY(-28px);
+    transition:0.5s;
+}
+.banner .movie_poster:hover .poster_attribute{
+    opacity:1;
+    bottom:48px;/* poster_attribute 의 바텀값과 함께 올려야함 */
+}
+  
+.banner .movie_poster img{
+    transition:0.5s;
+}
+  
+.banner .poster_attribute{
+    position:absolute; 
+    z-index:5;
+    left:0;
+    right:0;
+    bottom: 22.11px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:12.49px;
+    opacity:0;
+    transition:0.5s;
+    
+    
+}
+.banner .poster_golden_egg{
+    position: absolute;
+    background-color: #222222;
+    top :5px;
+    left :5px;
+    width: 54px;
+    height: 26px;
+    border-radius: 8px;  
+    opacity: 0;  
+    z-index:2;
+    transition:0.5s;
+    background-image: url(../img/ico_goldenegg2.png);
+    background-repeat: no-repeat;
+}
+
+.banner .poster_golden_egg .random_number{
+    z-index: 10;
+    color:#fff;
+    text-align: center;
+    line-height:26px;
+    margin-left: 22px;
+    position:absolute;
+    right: 10%;
+    top: 0;
+    font-size: 13px;
+}
+
+.banner .movie_poster:hover .poster_golden_egg{
+    opacity: 1;
+    transform:translateY(-28px) ;
+}
+
+    
+.banner .btn_red{
+    background-color:#fff;
+    width:140px; 
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    border-radius:5px;
+    font-size:16px;
+    color:#757575;
+    text-decoration:none;
+    font-weight:bold;
+   
+}
+.banner .btn_white{
+    
+    background-color:#F34C55;
+    width:140px; 
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    border-radius:5px;
+    font-size:16px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+}
+.banner .controls_wrapper{
+    position: relative;
+    width: 1300px;
+    margin:0 auto;
+
+}
+.banner .controls a {
+    position: absolute;
+    width: 22px;
+    height: 32px;
+    color: #fff;
+    top:50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    border-radius: 2px;
+    transition: 0.3s;
+   
+}
+.banner .controls a.prev{
+    left:-150px; 
+}
+.banner .controls a.next{
+    right:-150px;
+}
+
+  /* 검은색도 올리고 버튼은 첨부터 올라가있었던거처럼하기 */
+
+  .banner .btn_Buymovie{
+    background:linear-gradient(165deg, rgba(237,49,36,1) 29%, rgba(228,148,82,0.8267682072829132) 100%);
+    display:block;
+    width: 100%;
+    height: 54px;
+    font-size: 32px;
+    font-weight: bold;
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 0;
+    transition:0.5s;
+    line-height: 48px;
+    
+}
+.banner .btn_Buymovie::before{
+    background:linear-gradient(165deg, rgba(237,49,36,1) 0%, rgba(228,148,82,0.8267682072829132) 63%);
+    display:block;
+    width: 100%;
+    height: 54px;
+    font-size: 32px;
+    font-weight: bold;
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    content: "빠른 예매하기";
+    left: 0;
+    top: 0;
+    transition:0.5s;
+    line-height: 48px;
+    
+}
+.banner .btn_Buymovie:hover::before{
+    
+    opacity: 1;
+}
+
+
+
+.egginfo_wrap{
+    display: inline-block;
+    background-color: #F2F0E5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    line-height: 27px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s;
+}
+.egginfo_wrap.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.egginfo_wrap h3{
+    font-weight: bold;
+}
+
+.egginfo_wrap p + p{
+    margin-top: 10px;
+}
+.egginfo_wrap::after{
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 100%;
+    border-width: 14px 10px;
+    border-style: solid;
+    border-color: transparent transparent #F2F0E5 transparent;
+}
+
+/* --------- 순욱 : #modal_ticketing 시작 --------- */
+
+.modal_ticketing_wrap .style_blue{color: #3D5595;}
+.modal_ticketing_wrap .style_red{color: #C93000;}
+
+.modal_ticketing_wrap{
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    top: calc(50% + 20px);
+    transform: translate(-50%, -50%);
+}
+
+.modal_ticketing_wrap *{
+    box-sizing: border-box;
+}
+
+.modal_ticketing{
+    width: 1544px;
+    padding: 22px 45px;
+    background: #F2F0E5;
+    border-radius: 10px;
+}
+
+.modal_ticketing h3{
+    font-size: 24px;
+    line-height: 54px;
+    color: #fff;
+    margin-bottom: 27px;
+}
+
+.modal_ticketing hr{
+    border: none;
+    height: 2px;
+    background: #222;
+    margin-bottom: 15px;
+}
+
+.modal_ticketing input{display: none;}
+
+.modal_ticketing label{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input:checked + label{font-weight: 700;}
+
+.modal_ticketing .scrollstyle label{
+    line-height: 32px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.modal_ticketing .scrollstyle input:checked + label{
+    color: #fff;
+    background-color: #222;
+}
+
+.modal_ticketing .btn_sort{
+    height: 27px;
+}
+
+.modal_ticketing .btn_sort label{
+    display: inline-block;
+    color: #757575;
+}
+.btn_sort input:checked+label{color: #222;}
+
+.btn_sort span{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    margin: 0 10px;
+    background: #222;
+    margin-bottom: 4px;
+}
+
+.modal_ticketing .scrollstyle{
+    height: 536px;
+    overflow-y: scroll;
+}
+
+.modal_ticketing .section_movie li{
+    margin-bottom: 5px;
+    text-indent: 21px;
+    padding-right: 5px;
+}
+
+
+.modal_ticketing .section_movie li label{background: no-repeat 10px 8px;}
+
+.modal_ticketing .section_movie label.grade_all{background-image: url("../img/ico_grade_all.png");}
+.modal_ticketing .section_movie label.grade_12{background-image: url("../img/ico_grade_12.png");}
+.modal_ticketing .section_movie label.grade_15{background-image: url("../img/ico_grade_15.png");}
+.modal_ticketing .section_movie label.grade_18{background-image: url("../img/ico_grade_18.png");}
+
+.modal_ticketing .scrollstyle::-webkit-scrollbar{
+    width: 5px;
+    visibility: hidden;
+}
+
+.modal_ticketing .scrollstyle::-webkit-scrollbar-thumb{
+    background-color: #222;
+    height: 1px;
+    border-radius: 5px;
+}
+
+
+.modal_ticketing .btn_close{
+    position: absolute;
+    font-size: 40px;
+    top: 10px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.modal_ticketing .btn_close:hover{
+    color: #333;
+}
+
+
+/* section별 레이아웃--------------------------------------------*/
+.modal_ticketing > form > div{
+    float: left;
+    border: 2px solid #222;
+    border-radius: 10px;
+    background: linear-gradient(#222 54px, #F2F0E5 54px);
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+}
+
+.modal_ticketing .section_movie{width: 377px; height: 680px;}
+.modal_ticketing .section_cinema{width: 511px; height: 680px;}
+.modal_ticketing .section_date{width: 115px; height: 680px;}
+
+.modal_ticketing .section_date .scrollstyle{
+    height: 400px;
+}
+
+.modal_ticketing > form > div.section_schedule{
+    width: 411px; height: 462px;
+    position: relative;
+    background: linear-gradient(#222 54px,#F2F0E5 54px,#F2F0E5 388px,#222 388px);
+    padding-bottom: 92px;
+}
+
+/* section_cinema  */
+
+.modal_ticketing .cinema_groupwrap > ul{
+    float: left;
+    border-right: 1px solid #222;
+    
+}
+
+.modal_ticketing .cinema_groupwrap li{
+    padding:0 5px;
+}
+.modal_ticketing .group_city{width: 86px;}
+.modal_ticketing .group_town{width: 170px;}
+.modal_ticketing .group_special{width: 190px;}
+
+
+
+.modal_ticketing .group_city li{
+    padding: 0;
+}
+
+.modal_ticketing .group_city label{
+    padding: 0;
+    text-align: center;
+}
+
+/* section_date */
+
+.modal_ticketing .section_date{
+    padding: 0 5px;
+    text-align: center;
+}
+
+.modal_ticketing .section_date h3{margin-bottom: 0;}
+
+.modal_ticketing .section_date .scrollstyle{
+    height: 607px;
+    padding: 0 5px;
+}
+
+.modal_ticketing .month{
+    border-bottom: 2px solid;
+    padding: 10px 0;
+    background-color: #F2F0E5;
+    position: sticky;
+    top: 0;
+    margin-bottom: 5px;
+    z-index: 1;
+}
+
+.modal_ticketing .month ~ .month{margin-top: 5px;}
+.modal_ticketing .month ~ .month::before{
+    content: "";
+    position: absolute;
+    border-top: 2px solid;
+    left: 0;
+    right: 0;
+    top: -2px;
+}
+
+
+.modal_ticketing .month p{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    
+}
+
+.modal_ticketing .section_date label{
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.modal_ticketing input:checked + label.style_blue{background-color: #3D5595;}
+
+.modal_ticketing input:checked + label.style_red{background-color: #C93000;}
+
+/* section_schedule 하위 */
+
+.modal_ticketing .section_schedule .cf *{
+    float: left;
+}
+
+.modal_ticketing .legend p{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.modal_ticketing .legend p span{
+    border: 1px solid;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px 9px;
+    line-height: 16px;
+    margin-right: 3px;
+}
+
+.modal_ticketing .section_schedule .style_red span{color: #C93000;}
+.modal_ticketing .section_schedule .style_blue span{color: #3D5595;}
+.modal_ticketing .legend > span{
+    display: block;
+    width: 1px; height: 17px;
+    background-color: #222;
+    margin: 5px 10px;
+}
+
+.modal_ticketing .section_schedule .scrollstyle{
+    height: 248px;
+}
+
+.modal_ticketing .group_schedule{
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    line-height: 27px;
+}
+.modal_ticketing .group_schedule p{
+    margin-bottom: 5px;
+}
+.modal_ticketing .group_schedule p span{
+    color: #C93000;
+    font-weight: bold;
+}
+
+.modal_ticketing .borderstyle{
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 3px 5px;
+    line-height: 16px;
+    margin-right: 4px;
+    float: left;
+}
+.modal_ticketing .remainseat{
+    width: 45px;
+    text-align: right;
+}
+
+.modal_ticketing .section_schedule li{
+    display: inline-block;
+    width: 114px;
+}
+
+.modal_ticketing .section_schedule label{
+    padding: 3px;
+    display: block;
+    line-height: 27px;
+    padding-right: 5px;
+}
+
+.modal_ticketing .section_schedule input:checked + label span{
+    color: #fff;
+}
+
+
+
+.modal_ticketing .section_schedule a{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.modal_ticketing .section_schedule a:hover::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    background: #fff;
+    left: 111px;
+    right: 111px;
+    bottom: 10px;
+}
+
+.modal_ticketing .schedule_frame{
+    height: 295px;
+}
+
+/* section_ad 하위 */
+
+.modal_ticketing .section_ad{
+    width: 411px; height: 208px;
+    background-image: none;
+    border: none;
+    padding: 0;
+}
+
+.modal_ticketing .section_ad div{
+    display: inline-block;
+    height: 208px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal_ticketing .section_ad .ad{
+    width: 218px;
+    background-image: linear-gradient(#f6c7bd, #efe1d4);
+    float: left;
+}
+
+.modal_ticketing .section_ad .qr{
+    width: 183px;
+    background: #222;
+    float: right;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.modal_ticketing .qr h4{
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.modal_ticketing .qr img{
+    border: 10px solid #fff;
+    margin-top: 8px;
+}
+.modal_ticketing .qr p{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 100;
+}
+
+.modal_ticketing .section_ticketinginfo{
+    width: 1023px; height: 146px;
+    background: #222;
+    padding: 20px 40px;
+}
+
+.modal_ticketing .section_ticketinginfo img{
+    width: 66px;
+    height: 106px;
+    margin-right: 40px;
+}
+
+.modal_ticketing .ticketinginfo_frame{
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.modal_ticketing .ticketinginfo_frame p{
+    font-size: 20px;
+    line-height: 32px;
+}
+.modal_ticketing .ticketinginfo_frame p ~ p{
+    margin-top: 5px;
+}
+
+.modal_ticketing .ticketinginfo_frame span{color: #fff;}
+.modal_ticketing .ticketinginfo_frame span ~ span::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    line-height: 27px;
+    background-color: #fff;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.modal_ticketing .submit{
+    background: linear-gradient(90deg, #E72655 -16.03%, #FA4557 41.97%, #FF7356 99.98%);
+    border-radius: 10px;
+    width: 411px;
+    height: 146px;
+    line-height: 146px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 0;
+    margin: 5px;
+}
+
+.modal_ticketing .submit::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #E72655 68.37%, #FA4557 88.46%, rgba(255, 115, 86, 0) 104.74%);
+    text-decoration: underline;
+    transition: 0.4s;
+    z-index: -1;
+}
+.modal_ticketing .submit:hover::before{
+    right: 0;
+}
+
+.modal_ticketing .submit::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    left: 105px;
+    right: 102px;
+    bottom: 43px;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+}
+
+.modal_ticketing .submit:hover::after{
+    transform: scaleX(1);
+}
+
+.modal_ticketing_wrap .modal_side_ad{
+    position: absolute;
+    width: 168px;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.modal_ticketing_wrap .modal_side_ad.left{
+    right: calc(100% - 10px);
+}
+.modal_ticketing_wrap .modal_side_ad.right{
+    left: calc(100% - 10px);
+}
+
+.modal_ticketing_wrap + .modal_ticketing_bg{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.modal_ticketing_wrap.hidden + .modal_ticketing_bg{
+    display: none;
+}
+/* --------- 순욱 : #modal_ticketing 끝 --------- */
+.btn_red{
+    background: #ed3124 ;
+    width:165px;
+    height:42px;
+    position: absolute;
+    bottom: 22.11px;
+    margin: 0 auto ;  
+    border:none;
+    border-radius: 5px;
+    padding: 0;
+    font-size:16px;
+    text-align: center;
+    line-height:42px;
+    
+  
+  }
+  .btn_white{
+    background: white;
+    width:165px;
+    height:42px;
+    position: absolute;
+    bottom: 70.16px;
+    margin: 0 auto;
+    border:none;
+    border-radius: 5px;
+    padding: 0;
+    font-size:16px;
+    text-align: center;
+    line-height:42px;
+    
+  }
+  .golden{
+    position: absolute;
+    top :5px;
+    left :5px;
+    width: 54px;
+    height: 26px;
+    
+    
+  }
+
+.poster_wrapper{
+    margin: 0 auto;
+}
+
+.movie_poster {
+  position: relative;
+  height: 323px;
+}
+
+  
+
+
+.title p{
+    font-size: 54px;
+    color:#e9e9e9;
+    opacity: 0;
+    transition: 2s;
+}
+.title h2 span{
+    color: #ED3124;
+}
+.title h2{
+    font-size: 81px;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 1s;
+}
+
+.title{
+    position: relative;
+    height: 189px;
+    margin-bottom: 27px;
+}
+.title *{
+    position: absolute;
+    opacity: 0;
+}
+.title p{
+    font-size: 54px;
+    color:#e9e9e9;
+    transition: 2s;
+}
+.title h2{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 81px;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+.title h3{
+    font-size: 27px;
+    left:50%;
+    top:calc(50% + 63px);
+    transform: translate(-50%, -50%);
+    transition: .3s;
+}
+
+.cultureplex{
+    overflow: hidden;
+}
+  .cultureplex .title p.active{
+    opacity: 1;
+  }
+  .cultureplex .title h2.active{
+    opacity: 1;
+    transition-delay: 1s;
+  }
+  .cultureplex .title p:nth-child(1).active{
+    left: 35%;
+    transition: 1.5s;
+  }
+  .cultureplex .title p:nth-child(2).active{
+    right: 35%;
+    transition: 1.5s;
+  }
+  .cultureplex .title h3.active{
+    opacity: 1;
+    transition-delay: 1.15s;
+  }
+  .cultureplex .contents{
+    height: 890px;
+    position: relative;
+  }
+  .cultureplex .title p:nth-child(1){
+    left: 25%;
+    top: 0;
+    transform: translateY(150%);
+}
+.cultureplex .title p:nth-child(2){
+    right: 25%;
+    bottom: 0;
+    transform: translateY(-150%);
+}
+.cultureplex .title h2{
+    text-align: center;
+}
+  /*글씨움직이는효과*/
+  .cp_list{
+    position: relative;
+    width: 100%;
+    height: 890px;
+    margin-right: 0;
+    transition: .5s;
+
+  }
+  .cp_wrapper{
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+  }
+  .cp_detail{
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    width: 514px;
+    height: 450px;
+    left: 20%;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .cp_detail h3{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .cp_description{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    transition: .5s;
+  }
+  .cp_description li{
+    position:absolute;
+    padding-bottom: 30px;
+    width:454px;
+    box-sizing: border-box;
+    opacity:0;
+    transition:.5s;
+  }
+  .cp_description li p:first-child{
+    font-size: 32px;
+    color: #ccc;
+    margin-bottom: 27px;
+    text-align: center;
+    
+    white-space: nowrap;
+  }
+  .cp_description li.active{
+    opacity:1;
+  }
+  .preview_img{
+    position: absolute;
+    bottom: 30px;
+  }
+  .preview_img li{
+    width: 141px;
+    height: 90px;
+    float: left;
+    margin-right: 15px;
+  }
+  .preview_img img{
+    width: 100%;
+    height: 100%;
+  }
+  .preview_img li:last-child{
+    margin-right: 0;
+  }
+
+  /*슬라이드효과*/
+  .cp_wrapper{
+    position: relative;
+    width: 100%;
+    height: 890px;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .cp_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    transition: 0.5s;
+  }
+  .cp_container > li{
+    position: absolute;
+    left:0;
+  }
+   
+  /*페이저*/
+  .cp_wrapper [class^="btn"]{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(34, 34, 34, 0.5) no-repeat 50%;
+    position: absolute;
+    top:50%;
+  }
+   
+  .cp_wrapper a.btn_prev{
+    background-image: url("../img/btn_prev.png");
+    left: 50px;
+  }
+  .cp_wrapper a.btn_next{
+    background-image: url("../img/btn_next.png");
+    right: 50px;
+  }
+  .cp_wrapper a[class^="btn"].disabled{
+    display: none;
+  }
+  .cp_wrapper .pager{
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+  }
+   
+  .cp_wrapper .pager a{
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  .cp_wrapper .pager a.active{
+    background-color: #ebebeb;
+  }
+  .cp_bg{
+    background-image: url(../img/img_4dx_main.jpg);
+  }
+  
+  
+/* --------- 순욱 : event~footer 시작 --------- */  
+/* --------- section.event --------- */
+
+.event{
+    padding: 54px 0;
+}
+
+.event h2{
+    margin-bottom: 27px;
+}
+
+.slideframe{
+    overflow: hidden;
+}
+
+.slide{
+    transition: 0.5s;
+}
+
+.slide li{
+    float: left;
+    width: 422px;
+    text-align: center;
+}
+.slide li ~ li{
+    margin-left: 27px;
+}
+
+.slide h3{
+    font-size: 22px;
+    margin: 10px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.slide img{
+    width: 100%;
+    height: 281px;
+}
+
+.event .pager a{
+    font-size: 32px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    top: 50%;
+    background: rgba(34, 34, 34, 0.5) no-repeat 50%;
+}
+
+.event .pager .btn_prev{
+    right: 101%;
+    background-image: url("../img/btn_prev.png");
+}
+.event  .pager .btn_next{
+    left: 101%;
+    background-image: url("../img/btn_next.png");
+}
+
+.event .btn_more{
+    position: absolute;
+    top: 54px;
+    right: 0;
+}
+
+/* --------- section.notice --------- */
+
+.notice{
+    background-color: #F8F8F8;
+    line-height: 54px;
+    overflow: hidden;
+}
+
+.notice h2{
+    float: left;
+    margin-right: 38px;
+}
+.notice ul{
+    float: left;
+    height: 54px;
+    transition: margin-top 1s;
+}
+.notice .link{color: #757575;}
+
+/* --------- section.adv --------- */
+
+.adv{
+    background-color: #FFA443;
+    text-align: center;
+}
+
+.adv img{
+    max-width: fit-content;
+    width: 100%;
+}
+
+/* --------- footer --------- */
+
+footer.footertext{
+    background-color: #F8F8F8;
+    padding-bottom: 54px;
+}
+
+footer .container{
+    background: url("../img/bg_footerlogo.png") no-repeat 0 50%;
+}
+
+footer.footertext *{
+    color: #757575;
+    line-height: 27px;
+}
+footer.footertext .fnb{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 27px;
+}
+
+footer.footertext .fnb li{
+    float: left;
+    line-height: 54px;
+    vertical-align: bottom;
+}
+
+footer.footertext .fnb li~li{
+    margin-left: 49px;
+}
+
+footer.footertext .fnb li a{
+    vertical-align: bottom;
+} 
+
+footer.footertext .fnb strong{
+    color: #222;
+    font-weight: 700;
+}
+
+footer.footertext address{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer.footertext address span{
+    display: inline-block;
+}
+footer.footertext address a{
+    text-decoration: underline;
+}
+
+footer.footertext .familysite{
+    position: absolute;
+    right: 0;
+    top: 81px;
+}
+
+footer.footertext .familysite select{
+    width: 151px;
+    height: 27px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-bottom: 27px;
+}
+
+footer.footertext .familysite > a{
+    display: inline-block;
+    width: 27px;
+    line-height: 27px;
+    background-color: #757575;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+footer.footertext .container .sns li{
+    font-size: 30px;
+    float: left;
+    margin-right: 30px;
+}
+
+footer.footertext .container .sns .youtube:hover i{
+    color: #f00;
+}
+footer.footertext .sns .facebook:hover i{
+    color: #38529A;
+}
+
+footer.footertext .sns .instargram:hover i{
+    background-image: linear-gradient(45deg,#833ab4 0%, #fd1d1d 50%, #fca642 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    color: transparent;
+}
+
+
+/* --------- 순욱 : event~footer 끝 --------- */  

@@ -1,0 +1,633 @@
+@charset "utf-8";
+@import url("./normalize.css");
+@import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+
+
+.hidden{
+    display: none;
+}
+.cf::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1;
+    color: #222;
+    padding: 0;
+    margin: 0;
+}
+a{color: inherit;}
+
+.container{
+    max-width: 1320px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+main{
+    padding-top: 56px;
+}
+
+/* --------- common sylte --------- */
+
+.btn_more{
+    line-height: 54px;
+    float: right;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+/* --------- font sylte --------- */
+
+.subtitle{
+    font-size: 54px;
+    line-height: 54px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.subparagraph{
+    font-size: 20px;
+}
+
+.subparagraph.bold{
+    font-weight: 700;
+}
+
+.footertext{
+    font-size: 14px;
+}
+/* ------------ popup ------------ */
+header .popup{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    border: 5px solid #E02E22;
+    padding: 42px 20px;
+    background-color: #fff;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+}
+
+header .popup hr{
+    border: none;
+    height: 1px;
+    background-color: #E02E22;
+    margin: 20px auto;
+}
+header .popup *{
+    padding: 0 19px;
+}
+
+header .popup ul{
+    margin-bottom: 30px;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+
+header .popup h2{line-height: 27px;}
+header .popup h3{
+    font-size: 14px;
+    line-height: 27px;
+}
+
+
+header .popup input{
+    display: none;
+}
+header .popup label{
+    color: #666;
+    padding-left: 26px;
+    padding-right: 0;
+    background: url("../img/checkbox.png") no-repeat 0 50%;
+    float: right;
+}
+header .popup input:checked + label{
+    background-image: url("../img/checkbox_checked.png")
+}
+
+header .popup .close{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 30px;
+    background-color: #E02E22;
+    color: #fff;
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+header .popup .close i{
+    padding: 0;
+}
+
+/* ------------ hearder ------------ */
+header{
+    width: 100%;
+    height: 54px;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    transition:0.35s;
+    border-bottom: 2px solid #E02E22;
+    z-index: 1000;
+}
+
+.submenu_bg.active{
+    margin-top: 2px;
+    width: 100%;
+    height: 37px;
+    background: #000;
+    transition:0.35s;
+}
+/* 스크롤시 헤더 색상 바뀜 */
+header.active{
+    background: #fff;
+    color: #222;
+}
+header.active .lang{
+    background: #fff;
+    color: #222;
+}
+header.active .submenu_bg{
+    background: #fff;
+    color: #222;
+}
+header h1{
+    max-width: 146px;
+    width: 20%;
+    float: left;
+    padding: 10px 0;
+}
+header .logo a{
+
+    width: 100%;
+    height: 34px;
+    background: url(../img/logo.png) no-repeat;
+    display: block;
+    text-indent: -100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+nav{
+    position: relative;
+    margin: 0 auto;
+    min-width: 320px;
+    width: 45%;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 18px;
+}
+.menu > .mainmenu{
+    float: left;
+    width: 25%;
+    position: relative;
+    line-height: 27px;
+}
+.menu > .mainmenu:hover > a{
+    color: #E02E22;
+}
+nav .submenu{
+    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.35s;
+    line-height: 37px;
+    font-size: 16px;
+}
+.menu > .mainmenu:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+nav .submenu li{
+    margin: 0 5px;
+    display: inline-block;
+}
+.submenu_bg.active{
+    margin-top: 2px;
+    width: 100%;
+    height: 37px;
+    background: #000;
+    transition: 0.35s;
+}
+.info{
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    font-size: 13px;
+}
+.lang{
+    background: #000;
+    padding: 0 10px 5px 10px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: background-color 0.35s;
+
+}
+.lang.active{
+    transform: translateY(0);
+    opacity: 1; 
+    visibility: visible;
+}
+.lang li{
+    line-height: 27px;
+}
+.info > ul > li{
+    line-height: 54px;
+}
+.info > ul > li{
+    float:left;
+    margin-left: 10px;
+}
+.info > ul > li > a{
+    margin: 0 5px;
+}
+.info .language ul{
+    position: absolute;
+    left: 21px;
+}
+.info .question a{
+    color: #E02E22;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+.modal_FAQ{
+    width: 530px;
+    padding: 30px 30px 40px;
+    background: #fff;
+    border: 1px solid #E02E22;
+    border-radius: 10px;
+    color: #555;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 32px;
+    position: absolute;
+    right: -31px;
+    top: 100%;
+    margin-top: 35px;
+}
+
+.modal_FAQ::after{
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 32px;
+    background: url("../img/sp_sprite01.png") no-repeat -50px -5px;
+    right: 30px;
+    bottom: 100%;
+    margin-bottom: -1px;
+}
+
+.modal_FAQ .btn_close{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    border: none;
+    background: none;
+    font-size: 40px;
+    line-height: 40px;
+    color: #E02E22;
+}
+
+.modal_FAQ *{box-sizing: border-box;}
+
+.modal_FAQ input{
+    line-height: 32px;
+}
+
+.modal_FAQ input[type="radio"],
+.modal_FAQ input[type="checkbox"]{
+    display: none;
+}
+
+/*  개인정보 수집에 대한 동의   */
+
+
+.modal_FAQ h3{
+    color: #222;
+    text-align: center;
+    line-height: 27px;
+}
+
+.modal_FAQ .notice{
+    height: 104px;
+    padding: 5px 15px;
+    color: #222;
+    font-size: 12px;
+    line-height: 24px;
+    overflow-y: scroll;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+.modal_FAQ .notice h4{
+    margin-top: 10px;
+}
+.modal_FAQ .notice span{
+    line-height: 40px;
+}
+
+
+.modal_FAQ .radio_group{
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.modal_FAQ .radio_group label{
+    padding-left: 21px;
+    margin-left: 50px;
+    background: url("../img/radio.png") no-repeat 0 50%;
+}
+.modal_FAQ .radio_group input:checked + label{
+    background-image: url("../img/radio_checked.png");
+    font-weight: bold;
+}
+
+
+.modal_FAQ .label_style,
+.modal_FAQ .check_group{
+    position: relative;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.modal_FAQ .label_style input{
+    border: none;
+    border-bottom: 1px solid #666;
+    text-indent: 130px;
+    width: 100%;
+}
+
+.modal_FAQ .label_style label{
+    position: absolute;
+    left: 10px;
+}
+
+.modal_FAQ .label_style input:focus{
+    outline: none;
+    border-bottom-color: #E02E22;
+}
+.modal_FAQ .label_style input:focus + label{
+    font-weight: bold;
+}
+
+
+/* 답변수신 여부 섹션 */
+
+.modal_FAQ .check_group{
+    text-align: right;
+    border-bottom: 1px solid #666;
+}
+
+.modal_FAQ .check_group span{
+    position: absolute;
+    left: 10px;
+}
+.modal_FAQ .check_group label{
+    display: inline-block;
+    padding-left: 21px;
+    margin-left: 25px;
+    background: url("../img/checkbox.png") no-repeat 0 50%;
+}
+.modal_FAQ .check_group label.disable{
+    background-image: url("../img/checkbox_disable.png");
+}
+
+.modal_FAQ .check_group input:checked + label{
+    background-image: url("../img/checkbox_checked.png");
+    font-weight: bold;
+}
+
+
+/*  로그인 경고창 - 지은  */
+
+.modal_FAQ label.disable:hover + .alert_login{
+    display: block;
+}
+
+.modal_FAQ .alert_login{
+    position: absolute;
+    width: 239px;
+    background-color: #E02E22;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 2;
+    left: 312px;
+    top: 45px;
+    display: none;
+}
+
+
+.modal_FAQ .alert_login::after{
+    position: absolute;
+    content: "";
+    border-width: 18px 12px;
+    border-style: solid;
+    border-color: transparent transparent #E02E22 transparent;
+    bottom: 100%;
+    left: 10px;
+}
+
+.modal_FAQ .alert_login p{
+    color: #fff;
+    text-align: center;
+    line-height: 27px;
+    margin-bottom: 7px;
+}
+
+.modal_FAQ .alert_login a{
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #E02E22;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+
+/* 문의 유형 섹션 */
+.modal_FAQ .select_wrap select{
+    width: 100%;
+    border: none;
+    appearance: none;
+    text-indent: 130px;
+    font-size: 14px;
+    color: #555;
+    background: url("../img/arrowdown.png") no-repeat right 10px center;
+    pointer-events: none;
+}
+.modal_FAQ .select_wrap.active{
+    border-bottom-color: #E02E22;
+}
+.modal_FAQ .select_wrap.active span{
+    font-weight: bold;
+}
+.modal_FAQ .select_wrap.active select{
+    background-image: url("../img/arrowdown_on.png");
+}
+
+.modal_FAQ .selectReplace{
+    display: none;
+    width: 360px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 11px;
+    background-color: #fff;
+    text-align: left;
+    text-indent: 20px;
+    z-index: 1;
+}
+.modal_FAQ .select_wrap.active .selectReplace{
+    display: block;
+}
+
+.modal_FAQ .selectReplace li{
+    border: 1px solid #999;
+    border-bottom: none;
+    font-size: 14px;
+}
+.modal_FAQ .selectReplace li:last-of-type{
+    border: 1px solid #999;
+}
+
+.modal_FAQ .selectReplace li:hover{
+    border-color: #E02E22;
+}
+.modal_FAQ .selectReplace li:hover +li{
+    border-top-color: #E02E22;
+}
+
+
+
+/*  문의 내용  */
+.modal_FAQ .text_group{
+    position: relative;
+    padding-top: 32px;
+}
+
+.modal_FAQ .text_group label{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    line-height: 32px;
+}
+
+.modal_FAQ textarea{
+    width: 470px;
+    height: 160px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    color: #333;
+    line-height: 27px;
+}
+
+.modal_FAQ textarea:focus{
+    outline: none;
+    border-color: #E02E22;
+}
+
+.modal_FAQ textarea:focus + label{
+    font-weight: bold;
+}
+
+
+
+/* 첨부하기 버튼 */
+.modal_FAQ .file_group{
+    position: relative;
+    top: 0;
+    margin-top: 10px;
+}
+
+.modal_FAQ .file_group input{
+    line-height: 20px;
+    text-indent: 15px;
+    width: 100%;
+    font-size: 12px;
+    border-bottom: #555;
+}
+
+.modal_FAQ .file_group input::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #555;
+    bottom: 0;
+    left: 0;
+}
+
+.modal_FAQ .file_group label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    background-color: #E02E22;
+    border-radius: 5px 0 0 0;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal_FAQ .file_group:hover label{
+    background-color: #AE2319;
+    font-weight: bold;
+}
+
+
+
+/* 제출하기 버튼 */
+
+.modal_FAQ form button{
+    width: 100%;
+    background-color: #E02E22;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.modal_FAQ form button:hover{
+    background-color: #AE2319;
+    font-weight: bold;
+}
+
+
+.btn_top{
+    position: fixed;
+    width: 61px;
+    height: 60px;
+    background: url("../img/btn_top.png") no-repeat;
+    right: 150px;
+    bottom: 100px;
+}
+

@@ -1,0 +1,42 @@
+css
+line 983~line 1021 아래 텍스트로 대체
+
+.cultureplex{
+    overflow: hidden;
+}
+  .cultureplex .title p.active{
+    opacity: 1;
+  }
+  .cultureplex .title h2.active{
+    opacity: 1;
+    transition-delay: 1s;
+  }
+  .cultureplex .title p:nth-child(1).active{
+    left: 35%;
+    transition: 1.5s;
+  }
+  .cultureplex .title p:nth-child(2).active{
+    right: 35%;
+    transition: 1.5s;
+  }
+  .cultureplex .title h3.active{
+    opacity: 1;
+    transition-delay: 1.15s;
+  }
+  .cultureplex .contents{
+    height: 890px;
+    position: relative;
+  }
+  .cultureplex .title p:nth-child(1){
+    left: 25%;
+    top: 0;
+    transform: translateY(150%);
+}
+.cultureplex .title p:nth-child(2){
+    right: 25%;
+    bottom: 0;
+    transform: translateY(-150%);
+  }
+  .cultureplex .title h2{
+    text-align: center;
+  }

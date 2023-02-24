@@ -1,0 +1,12 @@
+문의하기 버튼 a태그에 title 추가
+
+.container{max-width : 1320px; width : 75%;}  수정
+header h1{width : 20%;} 수정
+header h1 a{width : 100%;} 수정
+nav{min-width : 320px; width: 45%; font-size: 1.8vh;} 수정
+.info{font-size: 1.8vh;} 수정
+
+예매 모달창 schedule_section label margin 조정
+
+
+발표 시연을 위해 예매 모달창 database 조금 추가

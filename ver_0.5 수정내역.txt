@@ -1,0 +1,12 @@
+banner관련 setTimeout 시간 00 > 500 수정???
+
+예매창 종료시 initial_all 함수 추가실행
+
+이벤트 슬라이드 좌우 버튼 설명 오타 수정
+이벤트 슬라이드 데이터베이스로 변경,
+
+.container{width : 80%}로 수정
+
+css validator 오류 수정 (, 삭제 ,  경고내역은 수정 안함)
+
+
